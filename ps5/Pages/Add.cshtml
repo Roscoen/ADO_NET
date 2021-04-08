@@ -1,0 +1,32 @@
+﻿@page
+@model ps5.Pages.AddModel
+@{
+    ViewData["Title"] = "Nowy produkt";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelper
+<h2>Nowy produkt</h2>
+<br />
+<br />
+<div class="container">
+    <form class="form-horizontal" method="post">
+        <div class="form-group">
+            <label asp-for="name" class="control-label col-sm2"></label>
+            <div class="col-sm-6">
+                <input asp-for="name" class="form-control">
+                <span asp-validation-for="name" class="text-danger"></span><!--Walidacja-->
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="price" class="control-label col-sm2"></label>
+            <div class="col-sm-6">
+                <input asp-for="price" class="form-control">
+                <span asp-validation-for="price" class="text-danger"></span><!--Walidacja-->
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button class="btn btn btn-primary">Zatwierdź</button>
+            </div>
+        </div>
+    </form>
+</div>
